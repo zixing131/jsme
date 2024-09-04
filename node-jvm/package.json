@@ -1,0 +1,33 @@
+{
+  "name": "sg-node-jvm",
+  "version": "0.2.6",
+  "description": "",
+  "main": "index.js",
+  "author": "Scott",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScottZSH/sg-node-jvm.git"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "virtual",
+    "machine"
+  ],
+  "dependencies": {
+    "adm-zip": ">=0.4.11"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0",
+    "chai": "~1.8.0",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0",
+    "grunt-node-webkit-builder": "~0.1.11"
+  }
+}
