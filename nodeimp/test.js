@@ -9,12 +9,14 @@ var entryPointClassName = jvm.loadJarFile("./Anyview4.0.jar");
 //jvm.loadJarFile("./rt.jar");
 
 //var entryPointClassName = jvm.loadJarFile("./freej2me.jar");
-console.log("entryPointClassName "+entryPointClassName); 
 //entryPointClassName=entryPointClassName.replaceAll('.','/')
+//jvm.setEntryPointClassName(entryPointClassName); 
+console.log("entryPointClassName "+entryPointClassName); 
 jvm.setEntryPointClassName('org/mozilla/internal/Sys');
 jvm.setEntryPointMethodName("isolate0Entry");
+//jvm.setEntryPointMethodName("startApp");
  
 jvm.on("exit", function(code) {
     process.exit(code);
 });
-jvm.run([entryPointClassName,null]);
+jvm.run([entryPointClassName,null]);//
