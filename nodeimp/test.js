@@ -5,16 +5,16 @@ jvm.setLogLevel(0);
 //jvm.loadJarFile("./rt.jar");
 jvm.loadJarFile("./classes-raw.jar"); 
 //jvm.loadJarFile("freej2me.jar"); 
-var entryPointClassName = jvm.loadJarFile("./jars/test.jar");
+var entryPointClassName = jvm.loadJarFile("./Anyview4.0.jar");
 //jvm.loadJarFile("./rt.jar");
 
 //var entryPointClassName = jvm.loadJarFile("./freej2me.jar");
 console.log("entryPointClassName "+entryPointClassName); 
-entryPointClassName=entryPointClassName.replaceAll('.','/')
-jvm.setEntryPointClassName(entryPointClassName);
-jvm.setEntryPointMethodName("startApp");
+//entryPointClassName=entryPointClassName.replaceAll('.','/')
+jvm.setEntryPointClassName('org/mozilla/internal/Sys');
+jvm.setEntryPointMethodName("isolate0Entry");
  
 jvm.on("exit", function(code) {
     process.exit(code);
 });
-jvm.run();
+jvm.run([entryPointClassName,null]);
